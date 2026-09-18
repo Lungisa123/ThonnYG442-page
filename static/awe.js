@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- contact form ---------- */
   var WA_NUMBER = "27686662424";             
-  var EMAIL     = "tonygumbe@gmail.com.com";
+  var EMAIL     = "tonygumbe@gmail.com";
 
   function collect(){
     var name = document.getElementById("fName").value.trim();
