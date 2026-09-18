@@ -475,33 +475,49 @@ p{ max-width:64ch; }
   max-width:60ch;
 }
 
-/* ============================================================
-   8. GALLERY
-   ============================================================ */
-.faces{ background:var(--void-2); border-block:var(--rule); }
-.faces__head{
-  display:flex; flex-wrap:wrap; gap:14px 36px;
-  align-items:flex-end; justify-content:space-between;
-  margin-bottom:38px;
-}
-.faces__head .h2{ margin:0; }
-.faces__head p{ margin:0; color:var(--mute); font-size:15px; }
+/* gallery grid — supports any number of images */
 .faces__grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:16px;
+  column-count: 2;
+  column-gap: 16px;
 }
-.faces__grid figure{ margin:0; position:relative; overflow:hidden; }
+@media (min-width: 640px)  { .faces__grid{ column-count: 3; } }
+@media (min-width: 980px)  { .faces__grid{ column-count: 4; } }
+
+.faces__grid figure{
+  break-inside: avoid;   /* stops an image splitting across columns */
+  margin: 0 0 16px;
+  overflow: hidden;
+  position: relative;
+}
 .faces__grid img{
-  aspect-ratio:3/4; object-fit:cover; cursor:zoom-in;
-  transition:transform .7s cubic-bezier(.2,.7,.3,1), filter .5s ease;
+  width: 100%;
+  height: auto;          /* natural ratio drives the masonry effect */
+  display: block;
+  cursor: zoom-in;
+  transition: transform .7s cubic-bezier(.2,.7,.3,1), filter .5s ease;
 }
-.faces__grid figure:hover img{ transform:scale(1.04); }
+.faces__grid figure:hover img{ transform: scale(1.04); }
 .faces__grid figcaption{
-  font-size:13px; color:var(--mute);
-  padding-top:11px;
+  font-size: 13px;
+  color: var(--mute);
+  padding-top: 10px;
 }
-.faces__grid figure:nth-child(even) img{ aspect-ratio:3/3.5; }
+
+/* "Show more" button */
+.faces__more{
+  display: block;
+  margin: 36px auto 0;
+  background: transparent;
+  border: 1px solid var(--pink);
+  color: var(--bone);
+  font: inherit; font-weight: 600; font-size: 14px;
+  padding: 13px 32px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+.faces__more:hover{ background: var(--pink); }
+.faces__more[hidden]{ display: none; }
 
 /* ============================================================
    9. LISTEN

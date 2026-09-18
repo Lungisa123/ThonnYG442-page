@@ -9,6 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="South African rising star Tony G442 drops Special Kids On Earth 2 — the continuation of the saga.">
 <script src="static/awe.js"></script>
+<script src="static/gallery.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -80,7 +81,6 @@
     <div class="wrap bio__grid">
       <div>
         <h2 class="h2">A continuation <em>of the saga</em></h2>
-        <!-- REPLACE: candid / studio shot, portrait orientation -->
         <div class="bio__side">
           <img class="tone" src="static/Images/main2.jpg" alt="Tony G442 in the studio">
           <p class="bio__cap">In the booth, Cape Town</p>
@@ -104,7 +104,6 @@
       </div>
 
       <div class="tiles">
-        <!-- REPLACE: photography/videography work sample -->
         <article class="tile">
           <img class="tone" src="static/Images/photography.jpg" alt="Photography and videography work">
           <div class="tile__label">
@@ -114,7 +113,6 @@
           </div>
         </article>
 
-        <!-- REPLACE: modelling / campaign shot -->
         <article class="tile">
           <img class="tone" src="static/Images/modeling.jpg" alt="Modelling agency work">
           <div class="tile__label">
@@ -159,7 +157,6 @@
           <li><span class="record__yr">NOW</span><span class="record__what"><em>Special Kids On Earth 2</em> — the continuation</span></li>
         </ul>
       </div>
-      <!-- REPLACE: live performance photo, stage lighting -->
       <div class="record__img">
         <img class="tone" src="static/Images/O.jpg" alt="Tony G442 performing live">
       </div>
@@ -176,21 +173,18 @@
 
       <div class="merch__grid">
         <article class="merch__card">
-          <!-- REPLACE: hoodie product shot -->
           <div class="merch__shot"><img class="tone" src="static/Images/hoodies.jpg" alt="Special Kids On Earth hoodie" data-zoom></div>
           <div class="merch__row"><h3>Hoodie</h3><span class="price">R700</span></div>
           <p class="merch__meta">Heavyweight fleece, front print. Sizes S–XXL.</p>
         </article>
 
         <article class="merch__card">
-          <!-- REPLACE: t-shirt product shot -->
           <div class="merch__shot"><img class="tone" src="static/Images/Tshirt.jpg" alt="Special Kids On Earth t-shirt" data-zoom></div>
           <div class="merch__row"><h3>T-shirt</h3><span class="price">R300</span></div>
           <p class="merch__meta">Cotton tee, front and back print. Sizes S–XXL.</p>
         </article>
 
         <article class="merch__card">
-          <!-- REPLACE: group shot of the merch being worn -->
           <div class="merch__shot"><img class="tone" src="static/Images/crew2.jpg" alt="Zusiphe, Zukhanye and Onikwayo wearing the merch" data-zoom></div>
           <div class="merch__row"><h3>The crew</h3><span class="price">—</span></div>
           <p class="merch__meta">Worn by Zusiphe, Zukhanye &amp; Onikwayo.</p>
@@ -201,26 +195,24 @@
     </div>
   </section>
 
-  <!-- ============ GALLERY ============ -->
-  <section class="faces" id="faces">
-    <div class="wrap">
-      <div class="faces__head">
-        <h2 class="h2">UWC campus <em>models</em></h2>
-        <p>Janate, Jessica &amp; Roxi</p>
-      </div>
-      <div class="faces__grid">
-        <!-- REPLACE ALL: campus shoot photos -->
-        <figure><img class="tone" src="https://picsum.photos/seed/uwc-janate/800/1066" alt="Janate on campus" data-zoom><figcaption>Janate</figcaption></figure>
-        <figure><img class="tone" src="https://picsum.photos/seed/uwc-jessica/800/1000" alt="Jessica on campus" data-zoom><figcaption>Jessica</figcaption></figure>
-        <figure><img class="tone" src="https://picsum.photos/seed/uwc-roxi/800/1066" alt="Roxi on campus" data-zoom><figcaption>Roxi</figcaption></figure>
-        <figure><img class="tone" src="https://picsum.photos/seed/uwc-crew/800/1000" alt="Campus shoot group" data-zoom><figcaption>UWC campus, full set</figcaption></figure>
-      </div>
+  <!-- gallery section -->
+<section class="faces" id="faces">
+  <div class="wrap">
+    <div class="faces__head">
+      <h2 class="h2">UWC campus <em>models</em></h2>
+      <p>Janate, Jessica &amp; Roxi</p>
     </div>
-  </section>
+
+    
+    <div class="faces__grid" id="galleryGrid" data-reveal-group></div>
+
+    <button class="faces__more" id="galleryMore" type="button" hidden>Show more</button>
+  </div>
+</section>
+
 
   <!-- ============ LISTEN ============ -->
   <section class="listen" id="listen">
-    <!-- REPLACE: album artwork or a wide atmospheric shot -->
     <div class="listen__bg"><img class="tone" src="static/Images/AmericanD.png" alt=""></div>
     <div class="wrap">
       <p class="listen__kicker">Out now</p>
@@ -234,14 +226,7 @@
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <!--
-    REPLACE THE PLACEHOLDER DETAILS BELOW:
-      WhatsApp  -> change 27XXXXXXXXX in BOTH the href and the JS var WA_NUMBER
-                   (country code, no +, no spaces. SA mobile 082 123 4567 = 27821234567)
-      Instagram -> change tonyg442
-      Email     -> change bookings@tonyg442.com in BOTH the href and the JS var EMAIL
-      TikTok    -> change tonyg442, or delete the whole <li>
-  -->
+
   <section class="contact" id="contact">
     <div class="wrap contact__grid">
 

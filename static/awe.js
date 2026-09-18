@@ -1,5 +1,4 @@
-
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   /* ---------- mobile nav ---------- */
@@ -62,12 +61,9 @@
     }, { passive: true });
   }
 
-  /* ---------- contact form ----------
-     No backend. It composes the message and hands it to
-     WhatsApp or the person's mail app.
-     CHANGE THESE TWO LINES: */
-  var WA_NUMBER = "27XXXXXXXXX";              // country code, no + and no spaces
-  var EMAIL     = "bookings@tonyg442.com";
+  /* ---------- contact form ---------- */
+  var WA_NUMBER = "27686662424";             
+  var EMAIL     = "bookings@tonygumbe@gmail.com.com";
 
   function collect(){
     var name = document.getElementById("fName").value.trim();
@@ -131,8 +127,9 @@
     if (lastFocus) { lastFocus.focus(); }
   }
 
-  document.querySelectorAll("img[data-zoom]").forEach(function(img){
-    img.addEventListener("click", function(){ openLb(img.currentSrc || img.src, img.alt); });
+  document.addEventListener("click", function (e) {
+    var img = e.target.closest("img[data-zoom]");
+    if (img) openLb(img.currentSrc || img.src, img.alt);
   });
 
   lbClose.addEventListener("click", closeLb);
@@ -140,4 +137,6 @@
   document.addEventListener("keydown", function(e){
     if (e.key === "Escape" && !lb.hidden) closeLb();
   });
-})();
+
+});
+ // end DOMContentLoaded
